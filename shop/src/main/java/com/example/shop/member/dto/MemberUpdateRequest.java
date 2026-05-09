@@ -7,9 +7,9 @@ import lombok.Getter;
 @Getter
 public class MemberUpdateRequest {
 
-    private String password;
-    private String phoneNumber;
-    private String address;
+    private final String password;
+    private final String phoneNumber;
+    private final String address;
 
     public MemberUpdateRequest(String password, String phoneNumber, String address) {
         this.password = password;

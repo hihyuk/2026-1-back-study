@@ -7,10 +7,10 @@ import lombok.Getter;
 @Getter
 public class MemberCreateRequest {
 
-    private String loginId;
-    private String password;
-    private String phoneNumber;
-    private String address;
+    private final String loginId;
+    private final String password;
+    private final String phoneNumber;
+    private final String address;
 
     public MemberCreateRequest(String loginId, String password, String phoneNumber, String address) {
         this.loginId = loginId;

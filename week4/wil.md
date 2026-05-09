@@ -1,0 +1,1 @@
+4주차에서 데이터베이스 설계와 ERD, JPA 엔티티 구현 방법을 공부했다. ERD를 통해 개체의 속성과 개체 간 관계를 ERD CLOUD를 통해 시각화해봤다. 특히 다대다 관계를 구현할 때 중간 테이블을 도입하여 일대다 관계로 풀어내는 점을 알게 되었다. JPA를 통한 엔티티 구현에서 @Entity, @id, @ManyToOne, @JoinColumn 등의 어노테이션을 사용하여 Member, Product, Order 엔티티를 구현했다.
