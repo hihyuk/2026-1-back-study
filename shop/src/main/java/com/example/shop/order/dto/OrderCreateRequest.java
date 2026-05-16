@@ -1,7 +1,6 @@
 package com.example.shop.order.dto;
 
-import com.example.shop.member.Member;
-import lombok.Getter;
+import com.example.shop.member.entity.Member;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

@@ -13,12 +13,13 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class OrderService {
+public class OrderServiceImpl implements OrderService {
 
     private final OrderRepository orderRepository;
 
     private final MemberRepository memberRepository;
 
+    @Override
     @Transactional
     public Long createOrder(OrderCreateRequest request) {
         Member member = memberRepository.findById(request.member);
@@ -33,11 +34,13 @@ public class OrderService {
         return order.getId();
     }
 
+    @Override
     @Transactional(readOnly = true)
     public List<Order> getAllOrders() {
         return orderRepository.findAll();
     }
 
+    @Override
     @Transactional(readOnly = true)
     public Order getOrderById(Long id) {
         Order order = orderRepository.findById(id);
@@ -49,6 +52,7 @@ public class OrderService {
         return order;
     }
 
+    @Override
     @Transactional
     public void cancelOrder(Long id) {
         Order order = orderRepository.findById(id);

@@ -1,6 +1,5 @@
-package com.example.shop.product;
+package com.example.shop.product.entity;
 
-import com.example.shop.order.OrderItem;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
