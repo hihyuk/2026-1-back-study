@@ -38,6 +38,7 @@ public class Member {
         this.point = 0;
     }
 
+    // 회원 정보 수정 메서드(loginId는 변경 불가)
     public void updateInfo(String password, String phoneNumber, String address) {
         if (password != null) {
             this.password = password;
@@ -50,5 +51,9 @@ public class Member {
         if (address != null) {
             this.address = address;
         }
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

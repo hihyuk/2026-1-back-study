@@ -1,8 +1,10 @@
-package com.example.shop.order;
+package com.example.shop.order.service;
 
-import com.example.shop.member.Member;
-import com.example.shop.member.MemberRepository;
+import com.example.shop.member.entity.Member;
+import com.example.shop.member.repository.MemberRepository;
 import com.example.shop.order.dto.OrderCreateRequest;
+import com.example.shop.order.entity.Order;
+import com.example.shop.order.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
