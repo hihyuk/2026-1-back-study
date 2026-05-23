@@ -5,6 +5,7 @@ import com.example.shop.product.service.ProductServiceImpl;
 import com.example.shop.product.dto.ProductCreateRequest;
 import com.example.shop.product.dto.ProductUpdateRequest;
 import com.example.shop.product.entity.Product;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class ProductController {
     private final ProductService productService;
 
     @PostMapping
-    public ResponseEntity<Void> createProduct(@RequestBody ProductCreateRequest request) {
+    public ResponseEntity<Void> createProduct(@Valid @RequestBody ProductCreateRequest request) {
         Long productId = productService.createProduct(request);
         return ResponseEntity.created(URI.create("/products/" + productId)).build();
     }
